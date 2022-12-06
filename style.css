@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@1&family=Poppins:wght@500;600&family=Roboto:ital,wght@0,300;0,400;0,900;1,500;1,700&display=swap'); 
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+.container{
+  background-image: linear-gradient(#ff7e00, #e9692c );
+  height: 100vh;
+  width: 100%;
+  text-align: center;
+  position: absolute;
+}
+.wrapper{
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.wrapper p{
+  position: relative;
+  display: inline-block;
+  color: #ffff;
+  z-index: 9999;
+  font-size: 48px;
+  margin-bottom: 120px;
+}
+.wrapper p::before{
+  content: ' ';
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background-color: #C04000;
+  z-index: -1;
+  border-radius: 50%;
+  left: -25%;
+  top: -123%; 
+  animation-name: shine;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+@keyframes shine{
+    0%,100%{
+        box-shadow: 0px 0px 32px -12px  #cb410b;
+    }
+    50%{
+        box-shadow: 0px 0px 32px 3px #cb410b;
+    }
+}
+button{
+    background-color: #C04000;
+    padding: 10px 38px;
+    border: 1px solid #A9A9A9;
+    border-radius: 28px;
+    color: #fff;
+    transition: all .2s ease;
+    outline: 0;
+}
+button:not(:last-child){
+    margin-right: 20px;
+}
+button:hover,
+button:focus
+{
+    border-color: #ff7f50;
+    color: #ff7f50;
+    box-shadow: 0px 7px 30px -12px #ff7f50;
+}
